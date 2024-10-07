@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Categories from "./components/categories";
 import { prismaClient } from "@/lib/prisma";
 import ProductList from "./components/product-list";
@@ -23,15 +22,15 @@ export default async function Home() {
   });
 
   return (
-    <div className="">
+    <div className="flex flex-col gap-8">
       <PromoBanner
         src="/banner-home01.png"
         alt="até 55% de desconto esse mês"
       />
-      <div className="mt-8">
+      <div>
         <Categories />
       </div>
-      <div className="mt-8">
+      <div>
         <SectionTitle>ofertas</SectionTitle>
         <ProductList products={deals} />
       </div>
@@ -39,9 +38,15 @@ export default async function Home() {
         src="/banner-home02.png"
         alt="até 55% de desconto em mouses"
       />
-      <div className="mt-8">
+      <div>
         <SectionTitle>teclados</SectionTitle>
         <ProductList products={keyboards} />
+      </div>
+      <div>
+        <PromoBanner
+          src="/banner-home03.png"
+          alt="até 55% de desconto em mouses"
+        />
       </div>
     </div>
   );
