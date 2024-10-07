@@ -1,6 +1,7 @@
 import { Product } from "@prisma/client";
 
 export interface ProductWithTotalPrice extends Product {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   imageUrls: any;
   totalPrice: number;
 }
