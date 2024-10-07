@@ -1,6 +1,7 @@
 import { Product } from "@prisma/client";
 
 export interface ProductWithTotalPrice extends Product {
+  imageUrls: any;
   totalPrice: number;
 }
 export const computeProdutTotalPrice = (
